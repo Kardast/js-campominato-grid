@@ -1,0 +1,35 @@
+/* Regole generali */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#grid{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-wrap: wrap;
+}
+
+.square_easy{
+    flex-basis: calc(100%/10);
+    height: calc(100%/10);
+    border: solid 1px black;
+}
+
+/* .square_mid{
+    flex-basis: calc(100%/10);
+    height: calc(100%/10);
+    border: solid 1px black;
+}
+
+.square_hard{
+    flex-basis: calc(100%/10);
+    height: calc(100%/10);
+    border: solid 1px black;
+} */
+
+.square.clicked{
+    background-color: blueviolet;
+}

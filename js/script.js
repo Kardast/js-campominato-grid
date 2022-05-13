@@ -4,9 +4,10 @@ const easyGame = document.querySelector(".easy_b");
 console.log(easyGame);
 const midGame = document.querySelector(".mid_b");
 console.log(midGame);
-
 const hardGame = document.querySelector(".hard_b");
+console.log(hardGame);
 const gridEl = document.getElementById("grid");
+console.log(gridEl);
 
 
 easyGame.addEventListener("click", 
@@ -39,8 +40,90 @@ easyGame.addEventListener("click",
             gridEl.append(divEl);
             
         }
+
+        document.querySelector(".easy_b").disabled = true;
+        document.querySelector(".mid_b").disabled = true;
+        document.querySelector(".hard_b").disabled = true;
+
     }
 )
+
+midGame.addEventListener("click", 
+
+    function() {
+        const myNewArrRandom = createRandUniqueNumArr(81, 1, 81);
+        console.log(myNewArrRandom);
+
+        for (let i = 0; i < myNewArrRandom.length; i++) {
+
+            const createMyElement = () => {
+                const node = document.createElement("div");
+                node.className = "square_mid";
+                return node;
+            }
+            const divEl = createMyElement();
+    
+            let arrItem = myNewArrRandom[i];
+    
+            divEl.append(arrItem);  
+    
+            divEl.addEventListener("click", 
+                function () {
+                    console.log(this);
+                    this.classList.add("clicked");
+                }
+            
+            )
+    
+            gridEl.append(divEl);
+            
+        }
+
+        document.querySelector(".easy_b").disabled = true;
+        document.querySelector(".mid_b").disabled = true;
+        document.querySelector(".hard_b").disabled = true;
+
+    }
+)
+
+hardGame.addEventListener("click", 
+
+    function() {
+        const myNewArrRandom = createRandUniqueNumArr(49, 1, 49);
+        console.log(myNewArrRandom);
+
+        for (let i = 0; i < myNewArrRandom.length; i++) {
+
+            const createMyElement = () => {
+                const node = document.createElement("div");
+                node.className = "square_hard";
+                return node;
+            }
+            const divEl = createMyElement();
+    
+            let arrItem = myNewArrRandom[i];
+    
+            divEl.append(arrItem);  
+    
+            divEl.addEventListener("click", 
+                function () {
+                    console.log(this);
+                    this.classList.add("clicked");
+                }
+            
+            )
+    
+            gridEl.append(divEl);
+            
+        }
+
+        document.querySelector(".easy_b").disabled = true;
+        document.querySelector(".mid_b").disabled = true;
+        document.querySelector(".hard_b").disabled = true;
+
+    }
+)
+
 
 
 

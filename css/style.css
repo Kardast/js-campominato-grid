@@ -18,18 +18,18 @@
     border: solid 1px black;
 }
 
-/* .square_mid{
-    flex-basis: calc(100%/10);
-    height: calc(100%/10);
+.square_mid{
+    flex-basis: calc(100%/9);
+    height: calc(100%/9);
     border: solid 1px black;
 }
 
 .square_hard{
-    flex-basis: calc(100%/10);
-    height: calc(100%/10);
+    flex-basis: calc(100%/7);
+    height: calc(100%/7);
     border: solid 1px black;
-} */
+}
 
-.square.clicked{
+.clicked{
     background-color: blueviolet;
 }

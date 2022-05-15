@@ -13,17 +13,12 @@ console.log(gridEl);
 easyGame.addEventListener("click", 
 
     function() {
-        const myNewArrRandom = createRandUniqueNumArr(100, 1, 100);
+        let myNewArrRandom = createRandUniqueNumArr(100, 1, 100);
         console.log(myNewArrRandom);
 
         for (let i = 0; i < myNewArrRandom.length; i++) {
 
-            const createMyElement = () => {
-                const node = document.createElement("div");
-                node.className = "square_easy";
-                return node;
-            }
-            const divEl = createMyElement();
+            let  divEl = createMyElement("square_easy");
     
             let arrItem = myNewArrRandom[i];
     
@@ -51,17 +46,12 @@ easyGame.addEventListener("click",
 midGame.addEventListener("click", 
 
     function() {
-        const myNewArrRandom = createRandUniqueNumArr(81, 1, 81);
+        let myNewArrRandom = createRandUniqueNumArr(81, 1, 81);
         console.log(myNewArrRandom);
 
         for (let i = 0; i < myNewArrRandom.length; i++) {
 
-            const createMyElement = () => {
-                const node = document.createElement("div");
-                node.className = "square_mid";
-                return node;
-            }
-            const divEl = createMyElement();
+            let divEl = createMyElement("square_mid");
     
             let arrItem = myNewArrRandom[i];
     
@@ -89,17 +79,12 @@ midGame.addEventListener("click",
 hardGame.addEventListener("click", 
 
     function() {
-        const myNewArrRandom = createRandUniqueNumArr(49, 1, 49);
+        let myNewArrRandom = createRandUniqueNumArr(49, 1, 49);
         console.log(myNewArrRandom);
 
         for (let i = 0; i < myNewArrRandom.length; i++) {
 
-            const createMyElement = () => {
-                const node = document.createElement("div");
-                node.className = "square_hard";
-                return node;
-            }
-            const divEl = createMyElement();
+            let divEl = createMyElement("square_hard");
     
             let arrItem = myNewArrRandom[i];
     
@@ -125,8 +110,12 @@ hardGame.addEventListener("click",
 )
 
 
-
-
+// funzione che crea un div e gli assegna la classe in base alla difficoltà cliccata
+function createMyElement(mySquares) {
+    const node = document.createElement("div");
+    node.className = mySquares;
+    return node;
+}
 
 
 // funzione che pusha numeri che scegli te da un min ad un max sempre diversi nell'array della dimensione che dai te
